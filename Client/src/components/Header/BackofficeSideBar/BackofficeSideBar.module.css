@@ -4,6 +4,9 @@
 	margin: 0;
 	margin-bottom: 50px;
 	transition: all 250ms ease;
+	background-image: url(https://www.transparenttextures.com/patterns/inspiration-geometry.png), 
+	linear-gradient( 180deg, 
+	var(--ong-black) 0%, var(--ong-gray-1) 50%);
 }
 
 .sideBar {
