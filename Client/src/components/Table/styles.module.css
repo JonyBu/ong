@@ -1,0 +1,149 @@
+.TableWrapper {
+  width: 100%;
+  max-width: var(--abs-space-13);
+}
+
+.Table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.TableHead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: none;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.TableRow {
+  display: block;
+  padding: var(--rel-space-2);
+  margin-bottom: var(--rel-space-4);
+  border-bottom: 3px solid var(--ong-gray-4);
+  border-radius: var(--rel-space-2);
+  background-color: var(--ong-white);
+}
+
+.HeadCell, .BodyCell {
+  padding: var(--rel-space-3);
+  text-align: center;
+}
+
+.HeadCell {
+  font-size: var(--rel-font-small);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ong-white);
+  padding: var(--rel-space-5) 0;
+  font-weight: 300;
+}
+
+.BodyCell {
+  border-bottom: 1px solid var(--ong-gray-4);
+  display: block;
+  font-size: var(--rel-font-small);
+  text-align: right;
+  color: var(--ong-gray-2);
+  overflow-wrap: break-word;
+}
+
+.BodyCell::before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--ong-gray-0);
+}
+
+.BodyCell:last-child {  
+  border-bottom: 0;
+}
+
+.ButtonsWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: var(--rel-space-1);
+}
+
+.ActionButton {
+  border: none;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.Image {
+  width: 100%;
+  padding: var(--rel-space-2);
+  transition: transform 200ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .TableWrapper {
+    max-width: initial;
+    overflow: hidden;
+  }
+
+  .TableHead {
+    width: initial;
+    height: initial;
+    position: initial;
+    margin: 0;
+    margin-bottom: var(--rel-space-4);
+    clip: none;
+    overflow: initial;
+    background-color: var(--ong-gray-0);
+  }
+
+  .TableRow {
+    display: table-row;
+    margin-bottom: initial;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-right: 2px solid #ddd;
+  }
+
+  .TableRow:hover {
+    background-color: #e1e1e1;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+
+  .BodyCell {
+    display: table-cell;
+    padding: var(--rel-space-3) var(--rel-space-4);
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .BodyCell button {
+    margin-top: 0;
+  }
+
+  .BodyCell::before {
+    content: none;
+  }
+  
+  .ButtonsCell {
+    width: var(--abs-space-10);
+  }
+
+  .ButtonsWrapper {
+    padding-top: 0;
+  }
+
+  .Image:hover {
+    transform: scale(1.04);
+  }
+}

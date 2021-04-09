@@ -1,0 +1,19 @@
+.ChildishTitle {
+  position: relative;
+  font-weight: 600;
+  color: var(--ong-gray-0);
+  font-size: var(--rel-font-larger);
+  font-family: 'Mansalva', cursive;
+  transform: skew(15deg);
+  display: inline;
+}
+
+.ChildishTitleBackground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  transform: skew(45deg);
+  z-index: -1;
+}

@@ -1,0 +1,15 @@
+ .carousel {
+   max-height: 80vh;
+}
+
+@media (max-width: 1023px){
+  .carousel {
+    max-height: 40vh;
+ }
+}
+
+@media (max-width: 480px){
+  .carousel {
+    max-height: 30vh;
+ }
+}

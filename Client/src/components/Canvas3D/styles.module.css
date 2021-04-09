@@ -1,0 +1,13 @@
+.CanvasWrapper {
+  right: 0%;
+  width: 100%;
+  height: 60vh;
+}
+
+@media screen and (min-width: 768px) {
+  .CanvasWrapper {
+    width: 60%;
+    position: absolute;
+    height: 100%;
+  }
+}

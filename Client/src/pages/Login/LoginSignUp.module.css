@@ -1,0 +1,67 @@
+
+:root {
+  --primario: var(--ong-white);
+  --secundario: #f7f7f7;
+  --textoColor: var(--ong-black);
+  --botonColor: var(--ong-white);
+  --botonbackgroud: var(--ong-green-2);
+  --error: var(--ong-red-2);
+}
+
+.loginScreen, .signUpForm{
+    max-width: 30em;
+    text-align: center;
+    margin: 2em auto;
+    padding: 1em 1em 2em 1em;
+    border-radius: 10px;
+    background-color: var(--primario);
+    color: var(--textoColor);
+    -webkit-box-shadow: 0px 21px 50px -20px rgba(0,0,0,0.5); 
+    box-shadow: 0px 21px 50px -20px rgba(0,0,0,0.5);
+  }
+
+  h2 {
+    margin: 0.5em;
+  }
+  
+  .input{
+    margin: 1em 0;
+    background-color: var(--secundario);
+    color: var(--textoColor);
+    width: 90%;
+    height: 36px;
+    border-radius: 5px;
+    border: 0;
+    text-align: left;
+    padding: var(--rel-space-2);
+    border: 1px solid rgba(28,110,164,0.27);
+    outline-color: var(--ong-green-4);
+  }
+  
+  .input::placeholder { color: var(--textoColor); opacity: 0.6; }
+  
+  .button{
+    margin: 1em 0 1.5em 0;
+    background-color: var(--botonbackgroud);
+    color:  var(--botonColor);;
+    width: 90%;
+    height: 36px;
+    border-radius: 5px;
+    border: 0;
+    padding: var(--rel-space-2);
+    cursor: pointer;
+  }
+
+  .button:hover{
+    background-color: var(--ong-green-1);
+  }
+
+  .borderRed {
+    border: 1px solid var(--error);
+    outline-color: var(--error);
+  }
+  
+  .errorSpan {
+    color: var(--error);
+  }
+  

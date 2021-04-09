@@ -1,0 +1,48 @@
+.MainWrapper {
+  width: 100%;
+  padding: var(--rel-space-6) var(--rel-space-5);
+  display: grid;
+  grid-template-columns: minmax(min-content, 1024px);
+  justify-content: center;
+  justify-items: center;
+  row-gap: var(--rel-space-6);
+  font-size: 1rem;
+}
+
+.ScreenHeader {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  row-gap: var(--rel-space-7);
+}
+
+.CreateButton {
+  align-self: end;
+  width: 100%;
+  height: fit-content;
+  padding: var(--rel-space-4);
+  border: none;
+  background: var(--ong-gray-0);
+  font-size: var(--rel-font-small);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--ong-white);
+  transition: all 250ms ease-in-out;
+}
+
+.CreateButton:hover {
+  background-color: var(--ong-primary-1-1);
+  cursor: pointer;
+}
+
+.CreateButton > span {
+  margin-left: var(--rel-space-1);
+}
+
+@media screen and (min-width: 768px) {
+  .ScreenHeader {
+    grid-template-columns: 1fr max-content;
+  }
+}

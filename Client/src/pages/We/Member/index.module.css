@@ -1,0 +1,18 @@
+.containerMember {
+  min-width: 220px;
+  max-width: 300px;
+  text-align: center;
+  margin: 0 50px 30px 50px
+}
+
+.memberImage {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.memberName {
+  font-size: 18px;
+  margin: 15px 0;
+}

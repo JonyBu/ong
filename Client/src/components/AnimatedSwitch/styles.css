@@ -1,0 +1,28 @@
+.switchWrapper {
+  width: 100%;  
+  position: relative;
+  min-height: calc(100vh - 87px);
+  padding-bottom: var(--rel-space-6);
+}
+.route-enter{
+  opacity: 0;
+  transform: scale(0.95);
+}
+.route-exit{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+.route-enter-active{
+  opacity: 1;
+  transform: scale(1);
+}
+.route-exit-active{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+.route-enter-active,
+.route-exit-active{
+  transition: all 500ms;
+}

@@ -1,0 +1,19 @@
+.containerWe {
+  padding: var(--rel-space-6);
+  text-align: center;
+}
+
+.containerMembers {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.containerLoader {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}

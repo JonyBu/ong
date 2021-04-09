@@ -1,0 +1,44 @@
+.containerContact {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contactWrapper {
+  width: 100%;
+  margin: 10px auto 0 auto;
+  display: grid;
+  justify-content: center;
+  padding: 24px;  
+}
+
+.contactTextContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactTextBackground {
+  padding: 32px 24px;
+  background: var(--ong-gray-0);
+  border: 1px solid #e1e8ed;
+}
+
+.H2 {
+  font-size: 32px;
+  color: var(--ong-primary-1-2);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.P {
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--ong-white);
+}
+
+@media screen and (min-width: 480px) {
+  .contactWrapper {
+    grid-template-columns: minmax(min-content, 614px) minmax(min-content, 409px);
+    column-gap: 52px;
+  }
+}

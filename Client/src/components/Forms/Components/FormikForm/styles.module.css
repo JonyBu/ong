@@ -1,0 +1,38 @@
+.Form {
+  display: block;
+  width: 100%;
+  padding: var(--rel-space-5) var(--rel-space-6);
+  background: var(--ong-white);
+}
+
+.FormName {
+  width: 100%;
+  font-size: var(--rel-font-big);
+  color: var(--ong-gray-1);
+  text-align: center;
+  margin-bottom: var(--rel-space-4);
+}
+
+.Button {
+  width: 100%;
+  font-size: var(--rel-font-normal);
+  padding: var(--rel-space-3);
+  margin-top: var(--rel-space-3);
+  background: var(--ong-gray-1);
+  border: none;
+  color: var(--ong-white);
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 250ms ease;
+}
+
+.Button:hover {
+  background-color: var(--ong-primary-2-1);
+}
+
+@media screen and (min-width: 768px) {
+  .Form {
+    padding: var(--rel-space-6) var(--rel-space-7);
+  }
+}

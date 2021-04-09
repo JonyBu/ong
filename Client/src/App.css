@@ -1,0 +1,215 @@
+/*  GLOBAL RESETS  */
+:root{ 
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: #44bcc2;
+  color: white;
+}
+
+html, body, * {
+  margin: 0;
+  padding: 0;  
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-size: 1rem;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+textarea {
+  font-family: inherit;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+a {
+  text-decoration: none
+}
+
+button {
+  outline: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+
+/*  GLOBAL FONT  */
+:root {
+  font-size: 1em; /* computed value of 16px */
+  /* react-bootstrap library already uses this config, but I put it here for ilustration*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* UNITS FOR SCALE (FONTS) */
+
+  --rel-font-tiny: 0.625rem;
+  --rel-font-small: 0.875rem;
+  --rel-font-normal: 1rem; 
+  --rel-font-medium: 1.125rem;
+  --rel-font-big: 1.25rem;
+  --rel-font-bigger: 1.5rem;
+  --rel-font-large: 2rem;
+  --rel-font-larger: 3rem;  
+}
+
+/*  GLOBAL COLORS  */
+:root {
+
+  /* ONG COLORS */
+  /* For use with rgba colors */
+  --ong-logo-pink-dark: 242, 109, 182; 
+  --ong-logo-pink-light: 242, 153, 211; 
+  --ong-logo-gray: 92, 102, 115; 
+  --ong-logo-green: 212, 217, 78; 
+  --ong-logo-white: 242, 242, 242; 
+
+  /* NEUTRAL COLORS */
+  --ong-white: #fff;
+  --ong-black: #000;
+
+  /* GRAY COLORS */
+  --ong-gray-0: #2f353a;
+  --ong-gray-1: #414a51;
+  --ong-gray-2: #5d6973;
+  --ong-gray-3: #8e969d;
+  --ong-gray-4: #dfe1e3;
+
+  /* PRIMARY COLORS */
+
+  --ong-primary-1-0: #793762;
+  --ong-primary-1-1: #c2579d;
+  --ong-primary-1-2: #f26dc4;
+  --ong-primary-1-3: #f58ad0;
+  --ong-primary-1-4: #fbd3ed;
+
+  --ong-primary-2-0: #225e61;
+  --ong-primary-2-1: #338d91;
+  --ong-primary-2-2: #44bcc2;
+  --ong-primary-2-3: #55ebf2;
+  --ong-primary-2-4: #99f3f7;
+
+  --ong-primary-3-0: #413e19;
+  --ong-primary-3-1: #989239;
+  --ong-primary-3-2: #d9d052;
+  --ong-primary-3-3: #e1d975;
+  --ong-primary-3-4: #e4de86;
+
+  /* SECONDARY COLORS */
+
+  --ong-secondary-1-0: #1b5315;
+  --ong-secondary-1-1: #2b8521;
+  --ong-secondary-1-2: #36a629;
+  --ong-secondary-1-3: #5eb854;
+  --ong-secondary-1-4: #9bd394;
+
+  --ong-secondary-2-0: #891414;
+  --ong-secondary-2-1: #b71b1b;
+  --ong-secondary-2-2: #e52222;
+  --ong-secondary-2-3: #ea4e4e;
+  --ong-secondary-2-4: #ef7a7a;  
+
+
+  /* ONG COLORS */
+
+  --ong-pink-0: #793762;
+  --ong-pink-1: #c2579d;
+  --ong-pink-2: #f26dc4;
+  --ong-pink-3: #f58ad0;
+  --ong-pink-4: #fbd3ed;
+
+  --ong-blue-0: #225e61;
+  --ong-blue-1: #338d91;
+  --ong-blue-2: #44bcc2;
+  --ong-blue-3: #55ebf2;
+  --ong-blue-4: #99f3f7;
+
+  /*  ACCENT COLORS */
+
+  --ong-yellow-0: #413e19;
+  --ong-yellow-1: #989239;
+  --ong-yellow-2: #d9d052;
+  --ong-yellow-3: #e1d975;
+  --ong-yellow-4: #e4de86;
+
+  --ong-green-0: #1b5315;
+  --ong-green-1: #2b8521;
+  --ong-green-2: #36a629;
+  --ong-green-3: #5eb854;
+  --ong-green-4: #9bd394;
+
+  --ong-red-0: #891414;
+  --ong-red-1: #b71b1b;
+  --ong-red-2: #e52222;
+  --ong-red-3: #ea4e4e;
+  --ong-red-4: #ef7a7a;  
+
+}
+
+/*  GLOBAL SPACING SCALE  */
+
+:root {
+  /* UNITS FOR SCALE (SPACING AND SIZING)*/
+  --rel-space-1: 0.25em;
+  --rel-space-2: 0.5em;
+  --rel-space-3: 0.75em;
+  --rel-space-4: 1em;
+  --rel-space-5: 1.5em;
+  --rel-space-6: 2em;
+  --rel-space-7: 3em;
+  --rel-space-8: 4em;
+  --rel-space-9: 6em;
+  --rel-space-10: 8em;
+  --rel-space-11: 12em;
+  --rel-space-12: 16em;
+  --rel-space-13: 24em;
+  --rel-space-14: 32em;
+  --rel-space-15: 40em;
+  --rel-space-16: 48em; 
+
+  /* 
+    I recommend using absolute units for
+    components or elements that NOT change its size
+    (ex. buttons, icons, borders). All OTHER elements 
+    and spacing should use rel units.
+
+    One exception is for font-size in nested HTML structures, 
+    use rem units in that case.
+
+    The equivalent in absolute units for the relative units shown above are: 
+  */
+
+  --abs-space-1: 4px;
+  --abs-space-2: 8px;
+  --abs-space-3: 12px;
+  --abs-space-4: 16px;
+  --abs-space-5: 24px;
+  --abs-space-6: 32px;
+  --abs-space-7: 48px;
+  --abs-space-8: 64px;
+  --abs-space-9: 96px;
+  --abs-space-10: 128px;
+  --abs-space-11: 192px;
+  --abs-space-12: 256px;
+  --abs-space-13: 384px;
+  --abs-space-14: 512px;
+  --abs-space-15: 640px;
+  --abs-space-16: 768px;
+ 
+}
