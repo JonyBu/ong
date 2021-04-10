@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { useHttp } from '../../hooks/useHttp';
+import { useHttp } from '../../hooks/useHttp';
 import { navArray } from '../../utils/navArray';
 import { NavLink } from "react-router-dom";
 
 import styles from "./Footer.module.css";
 
-import { mockupDataFromEndpoint } from './mockupDataFromEndpoint';
-
 const Footer = () => {
   const [publicData, setPublicData] = useState({});
-  // const { httpGet } = useHttp();
+  const { httpGet } = useHttp();
 
   useEffect(() => {
     let isMounted = true;
 
     const getOrganizationData = async () => {
-      // UNCOMMENT FOR DEVELOP WITH BACKEND
-      // const { data } = await httpGet("/organizations/1/public");
-      // setPublicData(data.organization);
+      const { data } = await httpGet("/organizations/1/public");
+      setPublicData(data.organization);
 
-      // if (isMounted) setPublicData(data.organization);
-
-      //DEVELOP WITHOUT BACKEND
-      setPublicData(mockupDataFromEndpoint);
+      if (isMounted) setPublicData(data.organization);
     };
 
     getOrganizationData();

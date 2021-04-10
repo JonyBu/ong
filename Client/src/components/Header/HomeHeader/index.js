@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-// import { useHttp } from '../../../hooks/useHttp';
+import { useHttp } from '../../../hooks/useHttp';
 
 import { logout } from '../../../redux/actions';
 import { navArray } from '../../../utils/navArray';
@@ -15,19 +15,14 @@ const HomeHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
   const { pathname } = useLocation();
   const dispatch = useDispatch();
+  const { httpGet } = useHttp();
 
 	useEffect(() => {
 		let isMounted = true;
 
 		const GetPublicData = async () => {
-			// DESTILDAR PARA PRODUCCIÓN (Sino hay que tener el backend levantando en desarrollo)
-			// const { data } = await httpGet('/organizations/1/public');
-			// setPublicData(data.organization);
-
-			// VERSIÓN PARA DESARROLLO
-			const response = await fetch('https://run.mocky.io/v3/3ed04a6d-a9fc-486d-8a88-c5f044746927');
-			const { data } = await response.json();
-
+			const { data } = await httpGet('/organizations/1/public');
+			setPublicData(data.organization);
 			if (isMounted) setPublicData(data.organization);
 		};
 

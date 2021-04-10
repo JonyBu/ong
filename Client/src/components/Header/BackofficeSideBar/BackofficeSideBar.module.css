@@ -72,11 +72,8 @@
 	flex-wrap: wrap;
 	padding: var(--rel-space-2) var(--rel-space-6);
 	list-style: none;
-	/* height: 120px;	 */
 	overflow: auto;
 	margin: 0;
-	background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"), 
-										linear-gradient(180deg, var(--ong-black) 0%, var(--ong-gray-1) 50%);
 }
 
 .ul > li {
