@@ -8,7 +8,7 @@ import styles from './styles.module.css'
 export const Canvas3D = () => {
   return (
     <div className={styles.CanvasWrapper}>
-      <Canvas>
+      <Canvas resize={{ scroll: false }}>
         <Suspense fallback={null}>
           <CameraAnimation />
           <Logo />

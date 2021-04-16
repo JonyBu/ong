@@ -18,7 +18,7 @@ function Actividades() {
   const getAllActivities = async () => {
     try {
       const res = await httpGet("/activities");
-      setActFromDB(res.data.activities);
+      setActFromDB(res.data.activities.reverse());
     } catch (error) {
       console.log(error);
     }

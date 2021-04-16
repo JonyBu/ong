@@ -28,9 +28,9 @@ const getOrganizationData = async () => {
 
 const updateOrganization = async (req) => {
 
-  const { id: idReceived } = req.params;  
+  const { id: idReceived } = req.params;   
   
-  const sliderPics = ['sliderPic1', 'sliderPic2', 'sliderPic3'] 
+  const sliderPics = ['sliderPic1', 'sliderPic2', 'sliderPic3'];
 
   await uploadMultipleImages(req, 'organization', sliderPics);  
 
@@ -41,7 +41,10 @@ const updateOrganization = async (req) => {
   if (!SlidersFromDB)  throw new Error('No se pudieron recabar todos los datos, Inténtelo de nuevo más tarde');
     
   sliderPics.forEach( async (s, i) => {
-    await Slides.update({ imageUrl: req.body[s] }, { 
+    await Slides.update({ 
+      imageUrl: req.body[s], 
+      text: req.body[`sliderText${i + 1}`] 
+    }, { 
       where: {
         organizationId: idReceived,
         order: i + 1

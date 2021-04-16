@@ -13,15 +13,17 @@ const Card = ({ card, path }) => {
     if ( card.content && card.updatedAt) {
       const previewContent = card.content;
       const indexOfContent = previewContent.indexOf('<p>');
-    
-      const contentInitial = indexOfContent + 3;
+                      
+      const contentInitial = indexOfContent;
       const sizeOfContent = 100;
     
       const subContent = indexOfContent != -1 ? 
         previewContent.substr(contentInitial, sizeOfContent)
-        : previewContent.substr(0, sizeOfContent)
-      
-      setContent(subContent + '...');
+        : previewContent.substr(0, sizeOfContent);
+
+      const subContentCleaned = subContent.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "");
+
+      setContent(subContentCleaned + '...');
       
       const date = new Date(card.updatedAt);
       const options = { year: 'numeric', month: 'short', day: 'numeric' };

@@ -4,7 +4,7 @@ import { ContactForm } from '../../components/Forms/ContactForm';
 import { ChildishTitle } from '../../components/ChildishTitle';
 
 import {
-  contactWrapper, contactTextContainer, contactTextBackground, H2, P, containerContact
+  contactWrapper, contactTextContainer, contactTextBackground, H2, P, containerContact, PFinal
 } from './styles.module.css'
 
 const ContactScreen = () => {
@@ -56,13 +56,14 @@ const ContactScreen = () => {
         <div className={contactTextContainer}>
           <div className={contactTextBackground}>
             <h2 className={H2}>
-              Lorem title
+              Contáctanos
             </h2>
             <p className={P}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt sequi minus unde illum fugit commodi cumque laboriosam, similique incidunt in porro! Ipsam, nobis asperiores. Ducimus harum maxime aut architecto assumenda.
+              Si deseas consultar mayor información sobre nosotros o tienes alguna duda al respecto, no dudes en realizar una consulta. 
+              Llena el formulario y te contactaremos a la brevedad. 
             </p>
-            <p className={P}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates vitae architecto est ut inventore pariatur alias, possimus rem vel praesentium aperiam, distinctio magnam sunt nostrum voluptatum, odio porro cumque dolores!
+            <p className={PFinal}>
+              Muchas Gracias.
             </p>
           </div>
         </div>

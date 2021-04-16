@@ -48,7 +48,7 @@ function ActivitiesDetails({ match }) {
             <div className={styles.footer}>
             <Link to='/actividades'>
                 <FontAwesomeIcon icon={ ['fas', 'arrow-left']} size="1x" />
-                Volver a actividades
+                <span>Otras actividades</span>
             </Link>
             </div>
         </div>

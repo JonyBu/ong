@@ -49,7 +49,7 @@ function NewsDetails({ match }) {
             <div className={styles.footer}>
                 <Link to='/novedades'>
                     <FontAwesomeIcon icon={ ['fas', 'arrow-left']} size="1x" />
-                     <span>  Volver a novedades </span>
+                    <span>Otras novedades</span>
                 </Link>
             </div>
         </div>

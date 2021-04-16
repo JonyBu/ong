@@ -12,13 +12,13 @@ function Novedades() {
     { name: "placeholder2", image: nouserimage, createdAt: null, id: 3 },
     { name: "placeholder3", image: nouserimage, createdAt: null, id: 4 },
   ]);
-
+  
   const { httpGet, isFetching } = useHttp();
 
   const allTheNews = async () => {
     try {
       const res = await httpGet("/news?true");
-      setNewsFromDB(res.data.news);
+      setNewsFromDB(res.data.news.reverse());
     } catch (error) {
       console.log(error);
     }

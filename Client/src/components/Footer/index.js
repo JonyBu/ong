@@ -11,22 +11,17 @@ const Footer = () => {
   const { httpGet } = useHttp();
 
   useEffect(() => {
-    let isMounted = true;
-
-    const getOrganizationData = async () => {
+    getOrganizationData();
+  }, []);
+  
+  const getOrganizationData = async () => {
+    try {
       const { data } = await httpGet("/organizations/1/public");
       setPublicData(data.organization);
-
-      if (isMounted) setPublicData(data.organization);
-    };
-
-    getOrganizationData();
-
-    return () => {
-      // cleanup
-      isMounted = false;
-    };
-  }, []);
+    } catch (error) {
+      console.log(error)
+    }
+  };
 
   return (
     publicData && 

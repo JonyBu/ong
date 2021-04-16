@@ -18,21 +18,17 @@ const HomeHeader = () => {
   const { httpGet } = useHttp();
 
 	useEffect(() => {
-		let isMounted = true;
-
-		const GetPublicData = async () => {
-			const { data } = await httpGet('/organizations/1/public');
-			setPublicData(data.organization);
-			if (isMounted) setPublicData(data.organization);
-		};
-
-		GetPublicData();
-
-		return () => {
-			// cleanup
-			isMounted = false;
-		};
+    GetPublicData();
 	}, []);
+  
+  const GetPublicData = async () => {
+    try {
+      const { data } = await httpGet('/organizations/1/public');
+      setPublicData(data.organization);
+    } catch (error) {
+      console.log(error)
+    }
+  };
 
   useEffect(() => {
     const className = pathname === '/'
@@ -97,7 +93,10 @@ const HomeHeader = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <img src={user.image} alt='Imagen del usuario' className={styles.profileImage} />
+                    <img 
+                      src={user.image || "https://icon-library.com/images/no-user-image-icon/no-user-image-icon-27.jpg"} 
+                      alt='Imagen del usuario' 
+                      className={styles.profileImage} />
                     <ul>
                       <li>
                         <NavLink activeClassName={styles.active} className={styles.menuItemProfile}  to='/backoffice/mi-perfil'>

@@ -59,6 +59,9 @@ export default function MyProfile() {
         title: 'Usuario eliminado',
         text,
       }));
+
+      dispatch(logout());
+
     } catch (error) {
       setDataModal({ 
         show: true, 
@@ -134,7 +137,7 @@ export default function MyProfile() {
           <h1 className={styles.title}>Mi Perfil</h1>
         </div>
         <div className={styles.body}>
-          <img src={image} className={styles.userImage} alt={`${firstName} ${lastName} image`} />
+          <img src={image || "https://icon-library.com/images/no-user-image-icon/no-user-image-icon-27.jpg"} className={styles.userImage} alt={`${firstName} ${lastName} image`} />
           <UserData data={userData} />
         </div>
       </div>

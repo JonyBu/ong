@@ -9,8 +9,8 @@ function Novedades() {
       <TableScreen
         endpoint='news'
         frontRouteName='Novedades'
-        keysToRender={['name', 'image', 'createdAt']}
-        fieldsNames={['nombre', 'imagen', 'creada el']}
+        keysToRender={['name', 'content', 'image']}
+        fieldsNames={['nombre', 'contenido', 'imagen']}
         itemFormRender={(itemToEdit, onSubmitSuccess, onSubmitError, onCloseModal) => {
           return (
             <NewsForm
