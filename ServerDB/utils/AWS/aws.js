@@ -61,7 +61,7 @@ const uploadImage = async (req, folder, field) => {
 	}
 	
 	if ( req.file ) {
-			const imageURL = await uploadImageS3(req, folder);        
+			const imageURL =  uploadImageS3(req, folder);        
 			req.body[field] = imageURL;
 	}
 }
@@ -69,7 +69,7 @@ const uploadImage = async (req, folder, field) => {
 const uploadMultipleImages = async (req, folder, fields) => {
 
 	if ( fields.length > 0) {
-		for ( field in req.body ){
+		for ( let field in req.body ){
 			if (fields.includes(field)) {
 				delete req.body[field]
 			}
@@ -77,9 +77,9 @@ const uploadMultipleImages = async (req, folder, fields) => {
 	}
 	
 	if ( req.files ) {
-		for ( file in req.files) {				
+		for ( let file in req.files) {				
 			const { originalname, buffer } = req.files[file][0];
-			const imageURL = await uploadOneImageS3(originalname, buffer, folder);			
+			const imageURL = uploadOneImageS3(originalname, buffer, folder);			
 			req.body[file] = imageURL;
 		}
 	}

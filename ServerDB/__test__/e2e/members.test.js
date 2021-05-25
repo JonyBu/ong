@@ -1,5 +1,5 @@
 const supertest = require('supertest')
-const app = require('../../app')
+const app = require('../../../app')
 const { getTestAdminToken } = require('../../utils/testSuiteSetup')
 const { membersMock } = require('../../mocks')
 
