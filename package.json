@@ -3,7 +3,8 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"start": "node index.js",
+		"start": "node app.js",
+		"index-start":" node index.jx",
 		"client": "cd cliente && npm start",
 		"dev": "cross-env NODE_ENV=development nodemon index.js",
 		"test": "cross-env NODE_ENV=test jest --testTimeout=10000 --verbose",
