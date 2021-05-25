@@ -1,5 +1,5 @@
 // https://alkemy-ong.s3.sa-east-1.amazonaws.com (base path)
-const { client: clientS3, BASE_URL, getObjectParams } = require('./config');
+const { client: clientS3, BASE_URL, getObjectParams } = require('./config').default;
 const { PutObjectCommand } = require('@aws-sdk/client-s3');
 const Response = require('../Response');
 
